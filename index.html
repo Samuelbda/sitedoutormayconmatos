@@ -1,41 +1,454 @@
-<!doctype html>
-<html lang="pt-BR" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Primary Meta Tags -->
-    <title>Maycon Matos | Candidato a Deputado Federal por Minas Gerais</title>
-    <meta name="title" content="Maycon Matos | Candidato a Deputado Federal por Minas Gerais" />
-    <meta name="description" content="Conheça Maycon Matos, candidato a Deputado Federal por Minas Gerais (Número 1078 - REPUBLICANOS). Advogado atuante na defesa dos direitos previdenciários, BPC e proteção social." />
-    <meta name="keywords" content="Maycon Matos, Deputado Federal, Minas Gerais, 1078, Republicanos, Teófilo Otoni, INSS, BPC, Direitos Previdenciários, Auxílio-Cuidador" />
-    <meta name="author" content="Campanha Maycon Matos" />
-    <meta name="robots" content="index, follow" />
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maycon Matos 1078 | Candidato a Deputado Federal - MG</title>
+  <meta name="description" content="Site oficial de Maycon Matos, o Advogado Terror do INSS. Candidato a Deputado Federal por Minas Gerais nº 1078 (REPUBLICANOS). Defesa do BPC e criação do Auxílio-Cuidador." />
+  
+  <!-- Estilos CSS Principais -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Maycon Matos | Candidato a Deputado Federal por Minas Gerais (1078)" />
-    <meta property="og:description" content="Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros. Conheça as principais propostas." />
-    <meta property="og:image" content="/images/maycon-matos.jpg" />
-    <meta property="og:locale" content="pt_BR" />
+  <!-- ==========================================================================
+       CABEÇALHO / NAVBAR FIXO
+       ========================================================================== -->
+  <header class="header" id="mainHeader">
+    <div class="container header-container">
+      
+      <!-- LOGO -->
+      <a href="#inicio" class="logo">
+        <div class="logo-badge">MM</div>
+        <div class="logo-text">
+          <h1>MAYCON MATOS <span class="logo-party">REPUBLICANOS 1078</span></h1>
+          <span class="logo-sub">Deputado Federal • Minas Gerais</span>
+        </div>
+      </a>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Maycon Matos | Candidato a Deputado Federal por Minas Gerais (1078)" />
-    <meta property="twitter:description" content="Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros." />
-    <meta property="twitter:image" content="/images/maycon-matos.jpg" />
+      <!-- MENU DE NAVEGAÇÃO -->
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#inicio" class="nav-link">Início</a></li>
+        <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#cartazes" class="nav-link">Materiais de Campanha</a></li>
+        <li><a href="#propostas" class="nav-link">Propostas</a></li>
+        <li><a href="#contato" class="nav-link">Contato</a></li>
+      </ul>
 
-    <!-- Theme Color for Mobile Browsers -->
-    <meta name="theme-color" content="#0a2540" />
+      <!-- AÇÕES DO HEADER -->
+      <div class="header-actions">
+        <button class="btn-copy-number" onclick="copyNumber('1078')" title="Copiar número para votar">
+          <span>Nº</span> <span>1078</span> 📋
+        </button>
 
-    <!-- Google Fonts Preconnect & Stylesheet -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-slate-50 text-slate-900 antialiased selection:bg-blue-600 selection:text-white">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+        <a href="#propostas" class="btn btn-yellow">CONHEÇA AS PROPOSTAS</a>
+
+        <!-- Botão Mobile Hamburger -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menu">
+          ☰
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         SEÇÃO HERO
+         ========================================================================== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        
+        <!-- COLUNA ESQUERDA: TEXTO E CHAMADAS -->
+        <div class="hero-text">
+          <div class="hero-badge-row">
+            <span class="badge-tag highlight">REPUBLICANOS • MINAS GERAIS</span>
+            <span class="badge-tag">Com Cleitinho Governador 10</span>
+          </div>
+
+          <h1 class="hero-title">MAYCON MATOS</h1>
+          
+          <div class="hero-nickname">
+            ADVOGADO TERROR DO INSS
+          </div>
+
+          <div class="hero-role">
+            Candidato a <strong>Deputado Federal</strong> por Minas Gerais
+          </div>
+
+          <div class="hero-quote">
+            "Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros."
+          </div>
+
+          <!-- CHIPS RÁPIDOS -->
+          <div class="hero-chips">
+            <span class="chip">⚡ +1 Milhão nas Redes</span>
+            <span class="chip">❤️ Auxílio-Cuidador (1 Salário Mínimo/mês)</span>
+            <span class="chip">🛡️ Defesa do BPC / LOAS</span>
+          </div>
+
+          <!-- NÚMERO DE VOTAÇÃO 1078 -->
+          <div class="hero-number-box">
+            <div class="number-label">
+              <span>Número de Urna</span>
+              <span>REPUBLICANOS</span>
+            </div>
+            <div class="number-digits">1078</div>
+            <button class="btn btn-outline" onclick="copyNumber('1078')">Copiar número</button>
+          </div>
+
+          <!-- BOTÕES DE AÇÃO -->
+          <div class="hero-ctas">
+            <a href="#propostas" class="btn btn-yellow">CONHEÇA MINHAS PROPOSTAS</a>
+            <a href="#contato" class="btn btn-blue">ACOMPANHE A CANDIDATURA</a>
+          </div>
+        </div>
+
+        <!-- COLUNA DIREITA: FOTO 1 (PERFIL OFICIAL) -->
+        <div class="hero-image-wrapper">
+          <div class="hero-image-card">
+            <img src="images/maycon-profile.jpg" alt="Maycon Matos - Advogado Terror do INSS - 1078" class="hero-img" />
+            
+            <div class="hero-img-overlay">
+              <div>
+                <strong style="color: var(--blue-primary); display: block;">Maycon Pereira de Matos</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Defesa Previdenciária & BPC • Advogado Atuante</span>
+              </div>
+              <div style="background: var(--blue-primary); color: var(--yellow-vivid); font-weight: 900; padding: 0.3rem 0.8rem; border-radius: 8px;">
+                1078
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO SOBRE (QUEM É MAYCON MATOS?)
+         ========================================================================== -->
+    <section class="section bg-white-sec" id="sobre">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Trajetória e Perfil</span>
+          <h2 class="section-title">QUEM É MAYCON MATOS?</h2>
+          <p class="section-subtitle">Maycon Pereira de Matos — Advogado • Teófilo Otoni — MG</p>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- TABELA DE INFORMAÇÕES INSTITUCIONAIS -->
+          <div class="about-info-card">
+            <h3 style="font-size: 1.1rem; color: var(--blue-primary); font-weight: 900; margin-bottom: 1rem;">
+              Informações Institucionais
+            </h3>
+
+            <div class="info-item">
+              <div class="info-label">NOME COMPLETO</div>
+              <div class="info-val">Maycon Pereira de Matos</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">RECONHECIDO COMO</div>
+              <div class="info-val">Advogado Terror do INSS</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">PROFISSÃO</div>
+              <div class="info-val">Advogado Especialista em INSS e BPC/LOAS</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">NATURALIDADE</div>
+              <div class="info-val">Teófilo Otoni — MG</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">CARGO PRETENDIDO</div>
+              <div class="info-val">Deputado Federal por Minas Gerais</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">PARTIDO E NÚMERO</div>
+              <div class="info-val">REPUBLICANOS • Nº 1078</div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-label">APOIO ESTADUAL</div>
+              <div class="info-val">Com Cleitinho Governador 10</div>
+            </div>
+          </div>
+
+          <!-- NARRATIVA BIOGRÁFICA COMPLETA -->
+          <div class="bio-content">
+            
+            <div class="bio-card-highlight">
+              "Meu nome é Maycon Matos. Sou advogado e fiquei conhecido nas redes sociais como Advogado Terror do INSS."
+            </div>
+
+            <div class="bio-paragraph">
+              Há anos, meu trabalho é voltado ao BPC/LOAS, aposentadorias e outros benefícios do INSS. Nas redes sociais, mais de 1 milhão de pessoas acompanham meus conteúdos sobre os direitos de quem depende do INSS e do BPC.
+            </div>
+
+            <div class="bio-paragraph">
+              No meu trabalho, vi de perto a realidade de famílias em que alguém deixa o emprego para cuidar de um filho com deficiência ou de um idoso doente.
+            </div>
+
+            <!-- CARD DE DESTAQUE DO AUXÍLIO-CUIDADOR -->
+            <div class="bio-auxilio-card">
+              <h4>BANDEIRA PRINCIPAL: AUXÍLIO-CUIDADOR</h4>
+              <p style="line-height: 1.6;">
+                Por isso, defendo o <strong>Auxílio-Cuidador: um salário mínimo por mês</strong> para mães e pais atípicos e para quem cuida de pessoa com deficiência ou de idoso doente.
+              </p>
+            </div>
+
+            <div class="bio-paragraph" style="background: var(--yellow-light); border-color: var(--yellow-border); font-weight: 800; color: var(--blue-primary);">
+              Sou candidato a Deputado Federal por Minas Gerais.
+            </div>
+
+            <div class="bio-signature">
+              Maycon Matos — Deputado Federal — 1078
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO CARTAZES DA CAMPANHA (COM ZOOM DAS 2 IMAGENS)
+         ========================================================================== -->
+    <section class="section bg-dark-sec" id="cartazes">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag" style="background: rgba(250, 204, 21, 0.2); color: var(--yellow-vivid);">Materiais de Divulgação</span>
+          <h2 class="section-title">MATERIAIS OFICIAIS DE CAMPANHA</h2>
+          <p class="section-subtitle">Confira os cartazes oficiais e compartilhe as propostas de Maycon Matos 1078.</p>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="posters-grid">
+          
+          <!-- CARTAZ 1: CANDIDATO & ADVOGADO TERROR DO INSS -->
+          <div class="poster-card">
+            <div class="poster-img-box" onclick="openModal('images/maycon-banner.jpg', 'Maycon Matos 1078 - Advogado Terror do INSS (Com Cleitinho Governador 10)')">
+              <img src="images/maycon-banner.jpg" alt="Maycon Matos Advogado Terror do INSS 1078 com Cleitinho Governador 10" />
+              <div class="poster-zoom-hint">🔍 Clique para ampliar o Cartaz 01</div>
+            </div>
+
+            <div class="poster-title">Maycon Matos — Advogado Terror do INSS</div>
+            <div class="poster-desc">
+              Cartaz oficial da candidatura a Deputado Federal por Minas Gerais (Nº 1078) com apoio a Cleitinho Governador 10. Em defesa do BPC e dos aposentados.
+            </div>
+            <button class="btn btn-yellow" onclick="openModal('images/maycon-banner.jpg', 'Maycon Matos 1078 - Advogado Terror do INSS')">VER CARTAZ COMPLETO</button>
+          </div>
+
+          <!-- CARTAZ 2: AUXÍLIO-CUIDADOR (1 SALÁRIO MÍNIMO POR MÊS) -->
+          <div class="poster-card">
+            <div class="poster-img-box" onclick="openModal('images/maycon-banner.jpg', 'Proposta Auxílio-Cuidador - 1 Salário Mínimo Por Mês para Mães Atípicas e Cuidadores')">
+              <img src="images/maycon-banner.jpg" alt="Auxílio-Cuidador 1 Salário Mínimo Por Mês para Mães e Pais Atípicos, PCD e Idoso Doente" />
+              <div class="poster-zoom-hint">🔍 Clique para ampliar o Cartaz 02</div>
+            </div>
+
+            <div class="poster-title">Defendo a Criação do Auxílio-Cuidador</div>
+            <div class="poster-desc">
+              Proposta de 1 salário mínimo por mês para mães e pais atípicos, quem cuida de pessoa com deficiência e quem cuida de idoso doente.
+            </div>
+            <button class="btn btn-yellow" onclick="openModal('images/maycon-banner.jpg', 'Proposta Auxílio-Cuidador - Maycon Matos 1078')">VER CARTAZ COMPLETO</button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO PROPOSTAS
+         ========================================================================== -->
+    <section class="section bg-light-sec" id="propostas">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Pautas e Compromissos</span>
+          <h2 class="section-title">PRINCIPAIS PROPOSTAS</h2>
+          <p class="section-subtitle">Conheça algumas das pautas apresentadas por Maycon Matos para representar Minas Gerais.</p>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="proposals-grid">
+          
+          <!-- PAUTA 01 -->
+          <div class="proposal-card">
+            <div>
+              <span class="prop-badge-num">PAUTA 01 • Cuidado e Família</span>
+              <h3 class="prop-title">AUXÍLIO-CUIDADOR (1 SALÁRIO MÍNIMO/MÊS)</h3>
+              <p class="prop-text">
+                Defesa da criação de um auxílio no valor de um salário mínimo mensal destinado a cuidadores de idosos doentes e mães e pais atípicos, além de quem cuida de pessoa com deficiência.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: var(--blue-primary);">
+              Compromisso com MG • Nº 1078
+            </div>
+          </div>
+
+          <!-- PAUTA 02 -->
+          <div class="proposal-card">
+            <div>
+              <span class="prop-badge-num">PAUTA 02 • Proteção Social</span>
+              <h3 class="prop-title">DEFESA DO BPC / LOAS</h3>
+              <p class="prop-text">
+                Atuação firme e incondicional em defesa dos beneficiários do Benefício de Prestação Continuada (BPC) e garantia de acesso desburocratizado aos direitos assistenciais.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: var(--blue-primary);">
+              Compromisso com MG • Nº 1078
+            </div>
+          </div>
+
+          <!-- PAUTA 03 -->
+          <div class="proposal-card">
+            <div>
+              <span class="prop-badge-num">PAUTA 03 • Fiscalização e Direitos</span>
+              <h3 class="prop-title">DEFESA PREVIDENCIÁRIA E COMBATE A FRAUDES</h3>
+              <p class="prop-text">
+                Defesa dos beneficiários e fiscalização rigorosa de possíveis irregularidades, fraudes e descontos indevidos relacionados aos benefícios do INSS.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: var(--blue-primary);">
+              Compromisso com MG • Nº 1078
+            </div>
+          </div>
+
+          <!-- PAUTA 04 -->
+          <div class="proposal-card">
+            <div>
+              <span class="prop-badge-num">PAUTA 04 • Cidadania e Acesso</span>
+              <h3 class="prop-title">DIREITOS DOS BENEFICIÁRIOS E IDOSOS</h3>
+              <p class="prop-text">
+                Defesa do acesso à informação simplificada e garantia dos direitos dos aposentados, pensionistas e beneficiários assistenciais em todo o estado de Minas Gerais.
+              </p>
+            </div>
+            <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 800; color: var(--blue-primary);">
+              Compromisso com MG • Nº 1078
+            </div>
+          </div>
+
+        </div>
+
+        <div style="text-align: center; margin-top: 3rem;">
+          <a href="#propostas" class="btn btn-yellow">VER TODAS AS PROPOSTAS</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO CANAIS OFICIAIS E CONTATO
+         ========================================================================== -->
+    <section class="section bg-white-sec" id="contato">
+      <div class="container">
+        
+        <div class="section-header">
+          <span class="section-tag">Canais Oficiais</span>
+          <h2 class="section-title">ACOMPANHE MAYCON MATOS</h2>
+          <p class="section-subtitle">Acompanhe a candidatura e tenha acesso às informações e conteúdos publicados nas redes sociais.</p>
+          <div class="divider-line"></div>
+        </div>
+
+        <div class="social-grid">
+          
+          <!-- INSTAGRAM -->
+          <div class="social-card">
+            <div class="social-icon-box" style="color: #E1306C;">📸</div>
+            <span style="font-size: 0.7rem; font-weight: 900; color: var(--text-subtle);">INSTAGRAM</span>
+            <div class="social-handle">@mayconmatos.adv</div>
+            <div class="social-desc">Acompanhe publicações, notícias e vídeos diários da campanha.</div>
+            <a href="https://www.instagram.com/mayconmatos.adv?stkn=MXV5ejRpd3Fra2pzNQ==" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">Acessar Instagram</a>
+          </div>
+
+          <!-- FACEBOOK -->
+          <div class="social-card">
+            <div class="social-icon-box" style="color: #1877F2;">👍</div>
+            <span style="font-size: 0.7rem; font-weight: 900; color: var(--text-subtle);">FACEBOOK</span>
+            <div class="social-handle">Maycon Matos</div>
+            <div class="social-desc">Siga a página e participe dos debates e atualizações.</div>
+            <a href="https://www.facebook.com/mayconmatos.adv/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">Acessar Facebook</a>
+          </div>
+
+          <!-- YOUTUBE -->
+          <div class="social-card">
+            <div class="social-icon-box" style="color: #FF0000;">▶️</div>
+            <span style="font-size: 0.7rem; font-weight: 900; color: var(--text-subtle);">YOUTUBE</span>
+            <div class="social-handle">Maycon Matos</div>
+            <div class="social-desc">Assista aos posicionamentos, entrevistas e explicações de direitos.</div>
+            <a href="https://www.youtube.com/@mayconmatosadv" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">Acessar YouTube</a>
+          </div>
+
+          <!-- WHATSAPP -->
+          <div class="social-card">
+            <div class="social-icon-box" style="color: #25D366;">💬</div>
+            <span style="font-size: 0.7rem; font-weight: 900; color: var(--text-subtle);">WHATSAPP</span>
+            <div class="social-handle">Fale com a campanha</div>
+            <div class="social-desc">Canal direto de comunicação, envio de sugestões e contato.</div>
+            <a href="#" onclick="copyNumber('1078')" class="btn btn-yellow" style="width: 100%;">Falar no WhatsApp</a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MODAL DE IMAGEM AMPLIADA (ZOOM CARTAZES)
+       ========================================================================== -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <div class="modal-header">
+        <strong id="modalTitle">Cartaz Oficial de Campanha</strong>
+        <button class="modal-close" id="modalClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <img src="" id="modalImage" alt="Cartaz Ampliado" class="modal-img" />
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST DE NOTIFICAÇÃO -->
+  <div class="toast" id="toast"></div>
+
+  <!-- ==========================================================================
+       RODAPÉ ELEITORAL / FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-legal-box">
+        <div class="legal-title">Conformidade Legal Eleitoral</div>
+        <div class="legal-code">PROPAGANDA ELEITORAL | PARTIDO: REPUBLICANOS (10) • Nº 1078</div>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;">
+          Propaganda Eleitoral na Internet • Resoluções vigentes do Tribunal Superior Eleitoral (TSE) • Conteúdo informativo e institucional em conformidade com as normas eleitorais vigentes.
+        </p>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem;">
+        <div>
+          <strong>Maycon Matos — Candidato a Deputado Federal por Minas Gerais</strong>. Todos os direitos reservados.
+        </div>
+        <div style="font-size: 0.8rem; color: var(--yellow-vivid);">
+          Desenvolvido com padrão institucional, responsivo e acessível.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Script JavaScript -->
+  <script src="script.js"></script>
+</body>
 </html>

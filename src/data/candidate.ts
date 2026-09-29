@@ -35,10 +35,20 @@ export interface NavLinkItem {
   href: string;
 }
 
+export interface CampaignBannerItem {
+  id: string;
+  title: string;
+  subtitle: string;
+  badge: string;
+  description: string;
+  position: 'left' | 'right';
+}
+
 export interface CandidateData {
-  // Identificação básica
   name: string;
   fullName: string;
+  nickname: string;
+  advogadoBPC: string;
   role: string;
   roleTitle: string;
   state: string;
@@ -49,13 +59,29 @@ export interface CandidateData {
   birthplace: string;
   tagline: string;
   photoUrl: string;
+  campaignBannerUrl: string;
+  governorAlliance: string;
+  followersCount: string;
 
   // Biografia
   about: {
     title: string;
-    paragraph1: string;
-    paragraph2: string;
+    subtitle: string;
+    paragraphs: string[];
+    signature: string;
     quickInfo: QuickInfoItem[];
+    highlights: {
+      number: string;
+      label: string;
+      desc: string;
+    }[];
+  };
+
+  // Seção de Cartazes / Imagens da Campanha
+  campaignPosters: {
+    title: string;
+    subtitle: string;
+    items: CampaignBannerItem[];
   };
 
   // Propostas
@@ -100,81 +126,137 @@ export interface CandidateData {
 
   // Paleta de Cores: Azul e Amarelo Claro Vibrante
   theme: {
-    primaryBlue: string;      // Azul Marinho Oficial
-    primaryBlueLight: string; // Azul Real
-    primaryDark: string;      // Azul Noite
-    accentYellow: string;     // Amarelo Claro Solar Vibrante
-    yellowHover: string;      // Amarelo Médio Hover
-    yellowLight: string;      // Fundo suave amarelo claro
-    bgLight: string;          // Off-white refinado
-    cardBg: string;           // Branco puro para suporte
+    primaryBlue: string;
+    primaryBlueLight: string;
+    primaryDark: string;
+    accentYellow: string;
+    yellowHover: string;
+    yellowLight: string;
+    bgLight: string;
+    cardBg: string;
   };
 }
 
 export const candidateData: CandidateData = {
   name: "MAYCON MATOS",
   fullName: "Maycon Pereira de Matos",
+  nickname: "Advogado Terror do INSS",
+  advogadoBPC: "Advogado do BPC",
   role: "Deputado Federal",
   roleTitle: "Candidato a Deputado Federal",
   state: "MG",
   stateFull: "Minas Gerais",
   party: "REPUBLICANOS",
   ballotNumber: "1078",
-  profession: "Advogado",
+  profession: "Advogado Especialista em INSS e BPC/LOAS",
   birthplace: "Teófilo Otoni — MG",
-  tagline: "Uma candidatura voltada à defesa dos direitos previdenciários e assistenciais e à representação dos mineiros.",
-  photoUrl: "/images/maycon-matos.jpg",
+  tagline: "Advogado Terror do INSS • Em defesa do BPC/LOAS, aposentados e da criação do Auxílio-Cuidador de 1 salário mínimo.",
+  photoUrl: "/images/maycon-profile.jpg",
+  campaignBannerUrl: "/images/maycon-banner.jpg",
+  governorAlliance: "Com Cleitinho Governador 10",
+  followersCount: "+1 Milhão de Seguidores",
 
-  // SEÇÃO SOBRE
+  // SEÇÃO SOBRE (QUEM É MAYCON MATOS?)
   about: {
     title: "QUEM É MAYCON MATOS?",
-    paragraph1: "Maycon Pereira de Matos é advogado, natural de Teófilo Otoni, Minas Gerais, e atua especialmente em questões relacionadas ao INSS, BPC e direitos previdenciários e assistenciais.",
-    paragraph2: "Sua candidatura apresenta como uma de suas pautas a defesa de beneficiários e famílias que dependem de políticas de proteção social.",
+    subtitle: "Advogado Terror do INSS • Mais de 1 milhão de pessoas acompanhando a luta por direitos",
+    paragraphs: [
+      "Meu nome é Maycon Matos. Sou advogado e fiquei conhecido nas redes sociais como Advogado Terror do INSS.",
+      "Há anos, meu trabalho é voltado ao BPC/LOAS, aposentadorias e outros benefícios do INSS. Nas redes sociais, mais de 1 milhão de pessoas acompanham meus conteúdos sobre os direitos de quem depende do INSS e do BPC.",
+      "No meu trabalho, vi de perto a realidade de famílias em que alguém deixa o emprego para cuidar de um filho com deficiência ou de um idoso doente.",
+      "Por isso, defendo o Auxílio-Cuidador: um salário mínimo por mês para mães e pais atípicos e para quem cuida de pessoa com deficiência ou de idoso doente.",
+      "Sou candidato a Deputado Federal por Minas Gerais."
+    ],
+    signature: "Maycon Matos — Deputado Federal — 1078",
+    highlights: [
+      {
+        number: "+1 Milhão",
+        label: "Seguidores nas Redes",
+        desc: "Pessoas acompanhando diariamente orientações sobre BPC e direitos do INSS"
+      },
+      {
+        number: "1 Salário Mínimo",
+        label: "Auxílio-Cuidador",
+        desc: "Proposta para mães e pais atípicos, cuidadores de PCD e idosos doentes"
+      },
+      {
+        number: "1078",
+        label: "Deputado Federal",
+        desc: "Maycon Matos por Minas Gerais — REPUBLICANOS (com Cleitinho 10)"
+      }
+    ],
     quickInfo: [
-      { label: "NOME", value: "Maycon Pereira de Matos" },
-      { label: "PROFISSÃO", value: "Advogado" },
-      { label: "NATURALIDADE", value: "Teófilo Otoni — MG" },
-      { label: "CARGO", value: "Deputado Federal" },
-      { label: "PARTIDO", value: "REPUBLICANOS" },
+      { label: "NOME", value: "Maycon Matos" },
+      { label: "RECONHECIDO COMO", value: "Advogado Terror do INSS" },
+      { label: "ATUAÇÃO", value: "Advogado do BPC / LOAS e Previdência" },
+      { label: "AUDIÊNCIA", value: "+1 Milhão nas Redes Sociais" },
+      { label: "BANDEIRA PRINCIPAL", value: "Auxílio-Cuidador (1 Salário Mínimo/mês)" },
+      { label: "CARGO E NÚMERO", value: "Deputado Federal — 1078" },
+      { label: "ESTADO E PARTIDO", value: "Minas Gerais • REPUBLICANOS" },
+      { label: "APOIO ESTADUAL", value: "Com Cleitinho Governador 10" }
+    ]
+  },
+
+  // SEÇÃO CARTAZES DA CAMPANHA
+  campaignPosters: {
+    title: "MATERIAIS OFICIAIS DE CAMPANHA",
+    subtitle: "Confira os cartazes oficiais de divulgação e compartilhe com quem precisa conhecer essas propostas.",
+    items: [
+      {
+        id: "poster-candidato",
+        title: "Maycon Matos — Advogado Terror do INSS",
+        subtitle: "Advogado do BPC • Deputado Federal 1078 (Com Cleitinho Governador 10)",
+        badge: "Cartaz Oficial 1078",
+        description: "Apresentação oficial do candidato a Deputado Federal Maycon Matos, conhecido em todo o Brasil pela defesa incansável dos direitos previdenciários e assistenciais.",
+        position: "left"
+      },
+      {
+        id: "poster-auxilio",
+        title: "Defendo a Criação do Auxílio-Cuidador",
+        subtitle: "1 Salário Mínimo por Mês para quem cuida de quem precisa",
+        badge: "Pauta Prioritária",
+        description: "Benefício mensal de 1 salário mínimo destinado a mães e pais atípicos, cuidadores de pessoa com deficiência e cuidadores de idoso doente.",
+        position: "right"
+      }
     ]
   },
 
   // SEÇÃO PROPOSTAS
   proposalsSection: {
     title: "PRINCIPAIS PROPOSTAS",
-    subtitle: "Conheça algumas das pautas apresentadas por Maycon Matos.",
+    subtitle: "Conheça as bandeiras e compromissos firmados por Maycon Matos para representar Minas Gerais na Câmara dos Deputados.",
     ctaButtonText: "VER TODAS AS PROPOSTAS",
     items: [
       {
         id: "auxilio-cuidador",
         number: "01",
-        title: "AUXÍLIO-CUIDADOR",
-        category: "Cuidado e Família",
-        description: "Defesa da criação de um auxílio no valor de um salário mínimo mensal destinado a cuidadores de idosos doentes e mães e pais atípicos.",
+        title: "CRIAÇÃO DO AUXÍLIO-CUIDADOR",
+        category: "Mães Atípicas e Cuidadores",
+        description: "Defesa de 1 salário mínimo por mês para mães e pais atípicos e para quem cuida de pessoa com deficiência ou idoso doente, que muitas vezes precisam abrir mão do trabalho.",
         iconName: "HeartHandshake"
       },
       {
         id: "defesa-bpc",
         number: "02",
-        title: "DEFESA DO BPC",
+        title: "DEFESA INCONDICIONAL DO BPC/LOAS",
         category: "Proteção Social",
-        description: "Atuação em defesa dos beneficiários do Benefício de Prestação Continuada e do acesso aos direitos assistenciais.",
+        description: "Atuação jurídica e legislativa direta para impedir cortes arbitrários e garantir agilidade na concessão do Benefício de Prestação Continuada.",
         iconName: "ShieldCheck"
       },
       {
         id: "defesa-previdenciaria",
         number: "03",
-        title: "DEFESA PREVIDENCIÁRIA",
+        title: "TERROR DAS FRAUDES NO INSS",
         category: "Fiscalização e Direitos",
-        description: "Defesa dos beneficiários e fiscalização de possíveis irregularidades e descontos indevidos relacionados aos benefícios do INSS.",
+        description: "Combate severo a descontos indevidos em folhas de pagamento de aposentados e fiscalização rigorosa de irregularidades nas agências e sistemas do INSS.",
         iconName: "FileSearch"
       },
       {
         id: "direitos-beneficiarios",
         number: "04",
-        title: "DIREITOS DOS BENEFICIÁRIOS",
+        title: "DIREITOS DOS BENEFICIÁRIOS E IDOSOS",
         category: "Cidadania e Acesso",
-        description: "Defesa do acesso à informação e dos direitos de aposentados, pensionistas e beneficiários.",
+        description: "Acesso simplificado à informação, assessoria de direitos e ampliação da assistência para aposentados, pensionistas e pessoas em vulnerabilidade.",
         iconName: "Users"
       }
     ]
@@ -182,53 +264,49 @@ export const candidateData: CandidateData = {
 
   // SEÇÃO COMPROMISSO
   commitmentSection: {
-    title: "MEU COMPROMISSO É REPRESENTAR VOCÊ",
-    text: "Conheça as propostas de Maycon Matos e acompanhe de perto as ideias, posicionamentos e ações apresentadas durante a campanha.",
+    title: "MEU COMPROMISSO É DEFENDER VOCÊ EM BRASÍLIA",
+    text: "Quem acompanha meu trabalho nas redes sabe: não tenho medo de combater injustiças do INSS. Na Câmara Federal, levarei a voz de quem mais precisa de acolhimento e respeito.",
     ctaButtonText: "CONHEÇA AS PROPOSTAS"
   },
 
-  // SEÇÃO ACOMPANHE / CONTATO
+  // SEÇÃO ACOMPANHE / REDES OFICIAIS
   socialSection: {
-    title: "ACOMPANHE MAYCON MATOS",
-    subtitle: "Acompanhe a candidatura e tenha acesso às informações e conteúdos publicados nas redes sociais.",
+    title: "ACOMPANHE O TERROR DO INSS NAS REDES",
+    subtitle: "Mais de 1 milhão de pessoas já acompanham meus conteúdos diários sobre BPC, INSS e aposentadorias. Junte-se a nós!",
     items: [
       {
         id: "instagram",
         platform: "INSTAGRAM",
         handle: "@mayconmatos.adv",
-        description: "Acompanhe publicações, notícias e vídeos diários da campanha.",
+        description: "Mais de 1 milhão de seguidores acompanhando vídeos diários, esclarecimento de dúvidas e bastidores.",
         icon: "Instagram",
-        // INSERIR LINK OFICIAL
-        url: "#",
-        actionText: "Acessar Instagram"
+        url: "https://www.instagram.com/mayconmatos.adv?stkn=MXV5ejRpd3Fra2pzNQ==",
+        actionText: "Seguir no Instagram"
       },
       {
         id: "facebook",
         platform: "FACEBOOK",
         handle: "Maycon Matos",
-        description: "Siga a página e participe dos debates e atualizações.",
+        description: "Participe das discussões e acompanhe transmissões ao vivo e notícias de direitos.",
         icon: "Facebook",
-        // INSERIR LINK OFICIAL
-        url: "#",
+        url: "https://www.facebook.com/mayconmatos.adv/",
         actionText: "Acessar Facebook"
       },
       {
         id: "youtube",
         platform: "YOUTUBE",
-        handle: "Maycon Matos",
-        description: "Assista aos posicionamentos, entrevistas e explicações de direitos.",
+        handle: "@mayconmatosadv",
+        description: "Vídeos completos com orientações passo a passo sobre BPC/LOAS e direitos do segurado.",
         icon: "Youtube",
-        // INSERIR LINK OFICIAL
-        url: "#",
-        actionText: "Acessar YouTube"
+        url: "https://www.youtube.com/@mayconmatosadv",
+        actionText: "Inscrever-se no YouTube"
       },
       {
         id: "whatsapp",
         platform: "WHATSAPP",
-        handle: "Fale com a campanha",
-        description: "Canal direto de comunicação, envio de sugestões e contato.",
+        handle: "Canal da Campanha 1078",
+        description: "Receba materiais oficiais, propostas e envie suas sugestões para Minas Gerais.",
         icon: "MessageCircle",
-        // INSERIR LINK OFICIAL
         url: "#",
         actionText: "Falar no WhatsApp"
       }
@@ -238,22 +316,23 @@ export const candidateData: CandidateData = {
   // CTA FINAL
   finalCta: {
     title: "MAYCON MATOS",
-    subtitle: "Deputado Federal por Minas Gerais",
-    quote: "Conheça as propostas e acompanhe a candidatura.",
+    subtitle: "Advogado Terror do INSS • Candidato a Deputado Federal por Minas Gerais",
+    quote: "Mães atípicas, cuidadores, beneficiários do BPC e aposentados terão uma voz firme e atuante no Congresso Nacional.",
     primaryBtnText: "CONHEÇA AS PROPOSTAS",
-    secondaryBtnText: "ENTRE EM CONTATO"
+    secondaryBtnText: "ME SIGA NO INSTAGRAM"
   },
 
   // FOOTER E IDENTIFICAÇÃO ELEITORAL
   footer: {
-    legalPlaceholder: "[INSERIR IDENTIFICAÇÃO ELEITORAL OBRIGATÓRIA]",
-    electoralInfo: "Propaganda Eleitoral na Internet • Resoluções vigentes do Tribunal Superior Eleitoral (TSE)",
-    copyrightText: "Maycon Matos — Candidato a Deputado Federal por Minas Gerais. Todos os direitos reservados.",
+    legalPlaceholder: "PROPAGANDA ELEITORAL | PARTIDO: REPUBLICANOS (10) • COLIGAÇÃO COM CLEITINHO GOVERNADOR",
+    electoralInfo: "Propaganda Eleitoral na Internet • Candidato a Deputado Federal Maycon Matos - Nº 1078 • Resoluções vigentes do TSE",
+    copyrightText: "Maycon Matos — Deputado Federal — 1078 • Minas Gerais. Todos os direitos reservados.",
     navLinks: [
       { name: "Início", href: "#inicio" },
-      { name: "Sobre", href: "#sobre" },
+      { name: "Quem é Maycon Matos", href: "#sobre" },
+      { name: "Materiais de Campanha", href: "#cartazes" },
       { name: "Propostas", href: "#propostas" },
-      { name: "Contato", href: "#contato" }
+      { name: "Redes Sociais", href: "#contato" }
     ],
     legalLinks: [
       { name: "Política de Privacidade", href: "#privacidade" },
@@ -263,13 +342,13 @@ export const candidateData: CandidateData = {
 
   // PALETA AZUL E AMARELO CLARO LUMINOSO
   theme: {
-    primaryBlue: "#0B2B60",       // Azul Marinho Oficial
-    primaryBlueLight: "#164A96",  // Azul Real Energético
-    primaryDark: "#061A3B",      // Azul Noite
-    accentYellow: "#FACC15",     // Amarelo Claro Solar (Yellow 400)
-    yellowHover: "#EAB308",      // Amarelo Médio (Yellow 500)
-    yellowLight: "#FEF9C3",      // Fundo suave amarelo claro (Yellow 100)
-    bgLight: "#F8FAFC",          // Off-white refinado
-    cardBg: "#FFFFFF"            // Branco puro
+    primaryBlue: "#0B2B60",
+    primaryBlueLight: "#164A96",
+    primaryDark: "#061A3B",
+    accentYellow: "#FACC15",
+    yellowHover: "#EAB308",
+    yellowLight: "#FEF9C3",
+    bgLight: "#F8FAFC",
+    cardBg: "#FFFFFF"
   }
 };
